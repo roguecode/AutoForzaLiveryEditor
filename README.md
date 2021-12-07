@@ -2,6 +2,7 @@
 This is a Windows program to import images as shapes into the Forza Horizon 5 Livery Editor to test out ideas by simulating moving the mouse and pressing keyboard buttons to create hundreds/thousands of basic shapes that look like an image. It uses JSON exports from the [Geometrize app](https://www.geometrize.co.uk/) and draws out the shapes for you in the Forza Livery Editor.
 
 ![](./Readme/Sot.jpg)
+(video vertically flipped because of the known issue mentioned below)
 ![](./Readme/FastGif.gif)
 ![](./Readme/Ron.jpg)
 
