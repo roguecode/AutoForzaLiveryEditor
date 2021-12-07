@@ -16,6 +16,7 @@ I made this as a quick little prototype for myself, this is not good or producti
 # Known issues
 - It doesn't properly handle resolutions that aren't 2560x1440 yet, simply because of a hardcoded pixel position for the OCR.
 - It is very timing dependant, and your results may vary. Alongside the exe you will find appsettings.json. If you have issues then you can trying slowing everything down by opening that file and changing the DelayMultiplier value of 1 to something like 1.5. That means that every "wait" action in the program will be * 1.5, making it wait more before doing the next action.
+- Currently the image is vertically flipped, when you apply it to a car you'll need to flip it the right way up.
 
 # Getting Forza Ready
 1) Open Forza Horizon 5, click Create Vinyl Groups
