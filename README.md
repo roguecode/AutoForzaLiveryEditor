@@ -38,6 +38,7 @@ I made this as a quick little prototype for myself, this is not good or producti
 7) It will draw all the shapes. This takes a long time.
 8) If you've run the SimpleTest.json then your final image should look like this, if it doesn't then raise an issue.
 ![](/Readme/SimpleTestDone.jpg)
+9) Optionally create a mask around it to get rid of the surrounding blobs
 
 # Generating the JSON files for your image
 1) Download the [Geometrize app](https://www.geometrize.co.uk/) 
