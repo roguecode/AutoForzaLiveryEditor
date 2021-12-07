@@ -1,6 +1,10 @@
 # AutoForzaLiveryEditor
 This is a Windows program to import images as shapes into the Forza Horizon 5 Livery Editor to test out ideas by simulating moving the mouse and pressing keyboard buttons to create hundreds/thousands of basic shapes that look like an image. It uses JSON exports from the [Geometrize app](https://www.geometrize.co.uk/) and draws out the shapes for you in the Forza Livery Editor.
 
+![](./Readme/Sot.jpg)
+![](./Readme/FastGif.gif)
+![](./Readme/Ron.jpg)
+
 # Responsibility disclaimer:
 This program should only be used to test out design ideas, I am not responsible for anything that could happen as a result of using it. Always abide by Forza rules.
 This program is provided as-is without any warranties of any kind. You are solely responsible for determining the appropriateness of using the program and assume any risks associated with it. Do not break the Forza rules, and USE IT AT YOUR OWN RISK.
@@ -9,6 +13,10 @@ There is another project that does a similar thing to this [here](https://github
 # Bad coding disclaimer
 I made this as a quick little prototype for myself, this is not good or production-ready code
 
+# Known issues
+- It doesn't properly handle resolutions that aren't 2560x1440 yet, simply because of a hardcoded pixel position for the OCR.
+- It is very timing dependant, and your results may vary. Alongside the exe you will find appsettings.json. If you have issues then you can trying slowing everything down by opening that file and changing the DelayMultiplier value of 1 to something like 1.5. That means that every "wait" action in the program will be * 1.5, making it wait more before doing the next action.
+
 # Getting Forza Ready
 1) Open Forza Horizon 5, click Create Vinyl Groups
 2) Press OK to create a new layer
@@ -16,7 +24,7 @@ I made this as a quick little prototype for myself, this is not good or producti
 4) Select the circle (one down from the top left)
 5) Choose any color
 6) It should look like this, and you're now ready.
-![Start state](./Readme/StartState.jpg)
+![](./Readme/StartState.jpg)
 
 # Running the app
 1) Run ForzaVinylPainting.exe as admin
@@ -27,7 +35,7 @@ I made this as a quick little prototype for myself, this is not good or producti
 6) If you want to pause the process then Press F7. To resume again press F6 but make sure you've opened Forza again before doing that. To immediately stop the app press F8.
 7) It will draw all the shapes. This takes a long time.
 8) If you've run the SimpleTest.json then your final image should look like this, if it doesn't then raise an issue.
-![Start state](/Readme/SimpleTestDone.jpg)
+![](/Readme/SimpleTestDone.jpg)
 
 # Generating the JSON files for your image
 1) Download the [Geometrize app](https://www.geometrize.co.uk/) 
@@ -35,3 +43,8 @@ I made this as a quick little prototype for myself, this is not good or producti
 3) Open an image and in the task settings on the right change opacity to 255, check the Rotated Ellipses box, and uncheck the other shapes.
 4) Click Start near the bottom and let it run for however many shapes you want. The more shapes the more detailed, but also the longer it will take to create in Forza. The Vinyl shape limit is 3000 in Forza, but some sides of the car like the front have lower limits like 1000. Press Stop once you've reached the number of shapes you want.
 5) Click Exporters at the bottom right, and then Save Geometry Data. Save the JSON file to the Images folder in the downloaded or built release (it is next to the exe).
+
+# Some other examples
+![](/Readme/BigLlama.jpg)
+![](/Readme/Doge.jpg)
+![](/Readme/Forza.jpg)
