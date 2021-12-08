@@ -7,11 +7,33 @@ namespace ForzaVinylPainting
 {
     public class ScreenNumberExtractor
     {
+        private const float TopPerc = 0.222f;
+        private const float BottomPerc = 0.269f;
+        private const float XLeftPerc = 0.08f;
+        private const float XRightPerc = 0.155f;
+        private const float YLeftPerc = 0.199f;
+
+        private readonly Rectangle _xCropRect;
+        private readonly Rectangle _yCropRect;
+
         private ScreenCapturer _capturer;
         private IronTesseract _engine;
 
-        public ScreenNumberExtractor()
+        public ScreenNumberExtractor(float screenWidth, float screenHeight)
         {
+            var topPixel = (int)(screenHeight * TopPerc);
+            var bottomPixel = (int)(screenHeight * BottomPerc);
+            var height = bottomPixel - topPixel;
+
+            var xLeftPixel = (int)(screenWidth * XLeftPerc);
+            var xRightPixel = (int)(screenWidth * XRightPerc);
+            var width = xRightPixel - xLeftPixel;
+
+            _xCropRect = new Rectangle(xLeftPixel, topPixel, width, height);
+
+            var yLeftPixel = (int)(screenWidth * YLeftPerc);
+            _yCropRect = new Rectangle(yLeftPixel, topPixel, width, height); // Assume same width and height as X
+
             _capturer = new ScreenCapturer();
             _engine = new IronTesseract();
             _engine.Configuration.TesseractVariables.Add("debug_file", "");
@@ -81,8 +103,8 @@ namespace ForzaVinylPainting
         {
             var screen = _capturer.CaptureScreen();
 
-            var xCropped = Crop(screen, new Rectangle(205, 319, 198, 68));
-            var yCropped = Crop(screen, new Rectangle(507, 319, 198, 68));
+            var xCropped = Crop(screen, _xCropRect);
+            var yCropped = Crop(screen, _yCropRect);
 
             var xResult = GetOcrResult2(xCropped);
             var yResult = GetOcrResult2(yCropped);
@@ -98,7 +120,7 @@ namespace ForzaVinylPainting
         private async Task<decimal?> GetSingleInt()
         {
             var screen = _capturer.CaptureScreen();
-            var xCropped = Crop(screen, new Rectangle(205, 319, 198, 68));
+            var xCropped = Crop(screen, _xCropRect);
             return GetOcrResult2(xCropped);
         }
 

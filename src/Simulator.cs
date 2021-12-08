@@ -16,7 +16,7 @@ namespace ForzaVinylPainting
 
         private readonly int _screenWidth;
         private readonly int _screenHeight;
-        private readonly ScreenNumberExtractor _screenNumberExtractor = new();
+        private readonly ScreenNumberExtractor _screenNumberExtractor;
         private readonly InputSimulator _simulator = new();
         private readonly Vector _currentPos = new();
         private readonly Vector _currentScale = new();
@@ -32,6 +32,7 @@ namespace ForzaVinylPainting
             _screenWidth = screenWidth;
             _screenHeight = screenHeight;
             _config = config;
+            _screenNumberExtractor = new ScreenNumberExtractor(_screenWidth, _screenHeight);
         }
 
         public async Task ProcessShape(Shape shape)
