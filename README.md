@@ -1,5 +1,6 @@
 # AutoForzaLiveryEditor
-This is a Windows program to import images as shapes into the Forza Horizon 5 Livery Editor to test out ideas by simulating moving the mouse and pressing keyboard buttons to create hundreds/thousands of basic shapes that look like an image. It uses JSON exports from the [Geometrize app](https://www.geometrize.co.uk/) and draws out the shapes for you in the Forza Livery Editor.
+This is ONLY for your own cars for offline personal use, do not share to Forza Online, play online with the vehicles, or do anything like sell a vehicle with the livery attached.
+It is a Windows program to import images as shapes into the Forza Horizon 5 Livery Editor to test out ideas by simulating moving the mouse and pressing keyboard buttons to create hundreds/thousands of basic shapes that look like an image. It uses JSON exports from the [Geometrize app](https://www.geometrize.co.uk/) and draws out the shapes for you in the Forza Livery Editor.
 
 ![](./Readme/Sot.jpg)
 (video vertically flipped because of the known issue mentioned below)
@@ -9,7 +10,7 @@ This is a Windows program to import images as shapes into the Forza Horizon 5 Li
 # Responsibility disclaimer:
 This program should only be used to test out design ideas, I am not responsible for anything that could happen as a result of using it. Always abide by Forza rules.
 This program is provided as-is without any warranties of any kind. You are solely responsible for determining the appropriateness of using the program and assume any risks associated with it. Do not break the Forza rules, and USE IT AT YOUR OWN RISK.
-There is another project that does a similar thing to this [here](https://github.com/forza-painter/forza-painter) but it modifies the memory of the game, which I am uncomfortable with as I would guess it breaches the Forza terms of "modding" the game. Simulating mouse and keyboard input all happens outside of the game, and the game process is never touched, so should not fall until any modding rules.
+There is another project that does a similar thing to this [here](https://github.com/forza-painter/forza-painter) but it modifies the memory of the game, which I am uncomfortable with as I would guess it breaches the Forza terms of "modding" the game. Simulating mouse and keyboard input all happens outside of the game, and the game process is never touched, so should not (don't trust my guess on this) fall until any modding rules. Remember that you can be banned at the discretion of the developers.
 
 # Bad coding disclaimer
 I made this as a quick little prototype for myself, this is not good or production-ready code
