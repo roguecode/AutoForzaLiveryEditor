@@ -1,5 +1,5 @@
 # AutoForzaLiveryEditor
-This is ONLY for your own cars for offline personal use, do not share to Forza Online, play online with the vehicles, or do anything like sell a vehicle with the livery attached.
+**This is ONLY for your own cars for offline personal use, do not share to Forza Online, play online with the vehicles, or do anything like sell a vehicle with the livery attached.**
 It is a Windows program to import images as shapes into the Forza Horizon 5 Livery Editor to test out ideas by simulating moving the mouse and pressing keyboard buttons to create hundreds/thousands of basic shapes that look like an image. It uses JSON exports from the [Geometrize app](https://www.geometrize.co.uk/) and draws out the shapes for you in the Forza Livery Editor.
 
 ![](./Readme/Sot.jpg)
